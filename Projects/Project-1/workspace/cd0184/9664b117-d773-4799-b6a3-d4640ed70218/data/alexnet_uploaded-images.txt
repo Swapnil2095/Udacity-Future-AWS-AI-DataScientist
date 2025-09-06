@@ -1,0 +1,88 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:                     coffee.jpg  label:                           
+ 2 key:                  dog-corgi.jpg  label:                           
+ 3 key:                 beagle_dog.jpg  label:                     beagle
+ 4 key:              dog-retriever.jpg  label:                           
+ 5 key:                       frog.jpg  label:                           
+
+     MATCH:
+
+                    coffee.jpg: 
+Real:                              Classifier:                       espresso
+
+                 dog-corgi.jpg: 
+Real:                              Classifier: pembroke, pembroke welsh corgi, corgi
+
+             dog-retriever.jpg: 
+Real:                              Classifier:             labrador retriever
+
+                      frog.jpg: 
+Real:                              Classifier:                            eft
+
+ NOT A MATCH:
+
+                beagle_dog.jpg: 
+Real:                     beagle   Classifier:               english foxhound
+
+# Total Images 5 # Matches: 4 # NOT Matches: 1
+
+     MATCH:
+
+                    coffee.jpg: 
+Real:                              Classifier:                       espresso  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                 dog-corgi.jpg: 
+Real:                              Classifier: pembroke, pembroke welsh corgi, corgi  
+PetLabelDog: 0  ClassLabelDog: 1
+
+             dog-retriever.jpg: 
+Real:                              Classifier:             labrador retriever  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                      frog.jpg: 
+Real:                              Classifier:                            eft  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                beagle_dog.jpg: 
+Real:                     beagle   Classifier:               english foxhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 5 # Matches: 4 # NOT Matches: 1
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  5  N Dog Images:  1  N NotDog Images:  4 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  5  N Dog Images:  1  N NotDog Images:  4 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+Number of Images    :   5
+Number of Dog Images:   1
+Number of Not-Dog Images:   4
+
+Percentage Statistics:
+pct_match           : 80.00
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 0.00
+pct_correct_notdogs : 50.00
+
+INCORRECT Dog/NOT Dog Assignments:
+Pet Label:                        Classifier Label: pembroke, pembroke welsh corgi, corgi
+Pet Label:                        Classifier Label:             labrador retriever
+
+INCORRECT Dog Breed Assignments:
+Pet Label:               beagle   Classifier Label:               english foxhound
+
+** Total Elapsed Runtime: 0:0:0
